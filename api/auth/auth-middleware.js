@@ -12,15 +12,13 @@ async function add(user) {
 
 function findBy(filter) {
     return db("users as u")
-      .join("roles as r", "u.role", "=", "r.id")
-      .select("u.id", "u.username", "r.name as role", "u.password")
+      .select("u.id", "u.username", "u.password")
       .where(filter)
   }
 
   function findById(id) {
     return db("users as u")
-      .join("roles as r", "u.role", "=", "r.id")
-      .select("u.id", "u.username", "r.name as role")
+      .select("u.id", "u.username")
       .where("u.id", id)
       .first()
   }
