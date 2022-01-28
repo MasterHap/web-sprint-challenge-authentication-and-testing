@@ -3,7 +3,6 @@ const request = require('supertest')
 const server = require('./server')
 const db = require('../data/dbConfig')
 const bcrypt = require('bcrypt')
-// const jwtDecode = require('jwt-decode')
 
 test('sanity', () => {
   expect(true)

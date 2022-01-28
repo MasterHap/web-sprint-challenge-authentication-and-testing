@@ -22,3 +22,4 @@ function findBy(filter) {
       .where("u.id", id)
       .first()
   }
+
